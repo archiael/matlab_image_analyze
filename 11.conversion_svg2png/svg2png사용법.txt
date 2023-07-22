@@ -1,0 +1,15 @@
+내용 마지막 업데이트 2023-05-04
+
+1. anaconda prompt 창 열기
+
+2. 관련 파이썬 패키지가 설치된 가상환경 활성화 (204번 서버 이미 설치됨)
+conda activate svg2png_py3_9
+
+3. svg 파일이 있는 폴더 경로에 png 변환하기
+(아래는 실행명령문 예시, 
+첫번째 파라미터인 svg2png.py 파일이 있는 경로와, 
+2번째 파라미터 *.svg 파일이 있는 경로로 수정필요함)
+
+*주의!!!!!! 한글이 경로에 있으면 오류가 나니 SVG 파일 경로를 한글을 제거하거나 다른경로로 이동시켜서 변환하시오
+
+python E:\git\matlab_source_org\AI_model\11.conversion_svg2png\svg2png.py "E:\git\matlab_source_org\AI_model\11.conversion_svg2png\example_svg\sampling ROI"

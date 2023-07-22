@@ -1,0 +1,3 @@
+Var1
+test
+E:\git\matlab_source_org\AI_model\3.RGB_dotting\1.input(example)\test.tif
