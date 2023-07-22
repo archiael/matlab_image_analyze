@@ -1,0 +1,22 @@
+% 패치이미지를 AI가 분석 가능한 형태로 변경
+% AI 모델에 사용된 패치의 전처리와 동일하게 전처리하는 함수
+% AI Input 사이즈인 224 x 224 x 3 형태로 변경
+% imageFile = allPatchesFiles_org.Files{15}
+function im_out = readPathoImage_224_chanel1to3(imageFile)
+    finalDim = 224;
+    % resize image
+    im = imread(imageFile);
+    if size(im,1) ~= finalDim || size(im,2) ~= finalDim
+        im = imresize(im,[finalDim,finalDim]);
+    end
+    
+    im = imadjust(rgb2gray(im), [0.0, 0.98], [0.0, 0.98], 1.0);
+    im = imadjust(im);
+    
+%     im = adapthisteq(rgb2gray(im));
+%     im_out = im;
+    % montage({allPatchesFiles_org.Files{15}, im})
+    im_out(:,:,1) = im;
+    im_out(:,:,2) = im;
+    im_out(:,:,3) = im;
+end
